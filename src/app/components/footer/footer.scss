@@ -1,0 +1,204 @@
+/* 8. Footer
+/*----------------------------------------------*/
+/*------------ Social Icon -----------*/
+#footer{
+    padding-top: 20px;
+}
+#footer, #footer-bottom{
+    background-color: #f8f9fa;
+}
+.social-links svg {
+    width: 20px;
+    height: 20px;
+    color: var(--light-gray-color);
+}
+.social-links svg:hover {
+    color: var(--primary-color);
+}
+.social-links li {
+  padding-right: 30px;
+}
+
+
+/* 9. About Us Page
+/*----------------------------------------------*/
+/*------------ Video Icon -----------*/
+.video-item a {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.video-item svg.video-player {
+    width: 80px;
+    height: 80px;
+    padding: 19px;
+    border-radius: 50%;
+}
+
+/* - Shop Page
+--------------------------------------------------------------*/
+/* ----------- Search Bar -----------*/
+.shopify-grid select#input-sort {
+    font-size: 1.2em;
+    color: var(--dark-grey-color);
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* ----------- SideBar -----------*/
+.sidebar input.search-field {
+    width: 290px;
+    height: 50px;
+    box-shadow: 5px 5px 15px 5px #eee;
+    border: 1px solid #eee;
+    padding-left: 20px;
+    outline-offset: 0;
+}
+.sidebar .search-icon {
+    padding: 14px;
+}
+.sidebar svg.search {
+    width: 20px;
+    height: 20px;
+}
+.sidebar h5.widget-title {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+.sidebar .sidebar-list li {
+    font-size: 1.2em;
+}
+.sidebar .sidebar-list li a {
+    color: var(--dark-30);
+}
+.sidebar .sidebar-list li a:hover {
+    color: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+  .widget-search-bar form {
+      flex-wrap: wrap;
+  }
+}
+
+/* ----------- Pagination -----------*/
+.paging-navigation .pagination .page-numbers {
+    font-size: 1.4em;
+    color: var(--gray-color-500);
+}
+.paging-navigation .pagination .page-numbers:hover {
+    color: var(--primary-color);
+}
+.paging-navigation .pagination svg {
+    width: 35px;
+}
+
+
+/* 10. Single Product Page
+/*----------------------------------------------*/
+/*------------ Product Info -----------*/
+.product-info .rating svg.star-fill {
+    fill: var(--dark-color);
+}
+.product-info .select-list li.select-item {
+    font-size: 1.2em;
+}
+.product-quantity .input-group {
+  width: 140px;
+  gap: 2px;
+}
+.product-quantity #quantity {
+  height: auto;
+  width: 20px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.product-quantity #quantity,
+.product-quantity .btn-number {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  color: #222;
+  padding: 0;
+}
+.single-product .cart-wrap h4.item-title {
+    font-size: 1.5em;
+}
+.single-product .product-quantity .stock-number {
+    font-size: 1.2em;
+}
+.meta-product h4.item-title {
+    font-size: 1.2em;
+}
+
+/*------------ Product Info Tabs -----------*/
+.product-info-tabs .tabs-listing button {
+    font-size: 2em;
+    color: var(--dark-color);
+}
+.product-info-tabs .nav-tabs .nav-link {
+    border: none;
+}
+.product-info-tabs .nav-tabs .nav-item.show .nav-link, 
+.product-info-tabs .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 991px) {
+  .product-info-tabs .tabs-listing button {
+      font-size: 1.2em;
+      padding-right: 20px!important;
+  }
+}
+
+
+/* 10. Cart Page
+-----------------------------------------------------*/
+.shopify-cart .card-price .money {
+    font-size: 1.5em;
+}
+.shopify-cart .total-price .money {
+    font-size: 2.9em;
+}
+.total-price .cart-totals {
+    font-size: 1.5em;
+}
+.shopify-cart .table th {
+    width: 30%;
+}
+
+
+/* 11. Checkout Page
+--------------------------------------------------------------*/
+.list-group-item span {
+    font-size: 1.2em;
+}
+
+
+/* 12. Blog Page
+--------------------------------------------------------------*/
+/*------------ Sidebar -----------*/
+.sidebar-post-item h4.card-title {
+    font-size: 1.2em;
+}
+
+/* 13. Sibgle Post Page
+--------------------------------------------------------------*/
+#single-post-navigation .post-navigation span.page-nav-title {
+    font-size: 1.5em;
+}
+.post-navigation svg {
+    width: 30px;
+    height: 45px;
+}
+.post-navigation:hover svg,
+.post-navigation:focus svg {
+    fill: var(--primary-color);
+}

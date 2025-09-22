@@ -1,0 +1,13 @@
+/* 6. Subscribe
+/*----------------------------------------------*/
+.subscribe-content p {
+  color: var(--gray-color-500);
+}
+
+@media only screen and (max-width: 1199px) {
+  .subscription-form input.form-control,
+  .subscription-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

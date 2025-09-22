@@ -1,0 +1,112 @@
+<div class="product-content container">
+  <!-- Search + Category Top Bar -->
+  <!-- Search + Category Top Bar -->
+  <!-- Search + Category Top Bar -->
+  <!-- Search + Category Top Bar -->
+  <div class="d-flex align-items-center mb-4 gap-2">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search products..."
+      [(ngModel)]="searchTerm"
+      (input)="applyFilter()"
+    />
+
+    <select class="form-select w-auto" [(ngModel)]="selectedCategory" (change)="applyFilter()">
+      <option value="" selected>All Categories</option>
+      @for(product of categories; track $index){
+      <option [value]="product">{{ product }}</option>
+      }
+    </select>
+  </div>
+  <!-- End Top Bar -->
+  <!-- End Top Bar -->
+  <!-- End Top Bar -->
+  <!-- End Top Bar -->
+  @if(loading){
+  <!-- loader -->
+  <!-- loader -->
+  <!-- loader -->
+  <!-- Loader -->
+  <app-loader></app-loader>
+  } @else{ @if(products.length){ @if(filteredData.length){
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    @for(product of pagedData; track $index){
+    <!-- Card -->
+    <!-- Card -->
+    <!-- Card -->
+    <!-- Card -->
+    <a class="col" routerLink="{{ product.id }}" (click)="viewDetails(product.id)">
+      <div class="card h-100">
+        <img [src]="product.images[0]" class="card-img-top" alt="Product Image" />
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="card-content">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description | slice : 0 : 60 }}...</p>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="h5 mb-0">${{ product.price }}</span>
+            <div>
+              @for(star of rangeFill(ratings[$index]); track $index){
+              <i class="bi bi-star-fill text-warning"></i>
+              } @for(star of rangeEmpty(ratings[$index]); track $index){
+              <i class="bi bi-star-fill" style="opacity: 0.25"></i>
+              }
+              <small class="text-muted">({{ ratings[$index] }})</small>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between bg-light">
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="addToCart(product, $event)"
+          >
+            @if(!isInCart(product.id)){
+            <i class="bi bi-cart display-0 text-white"></i>
+            Add to Cart } @else{
+            <i class="bi bi-cart display-0 text-white"></i>
+            Added }
+          </button>
+          <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-heart"></i></button>
+        </div>
+      </div>
+    </a>
+    }
+  </div>
+  } @else {
+  <!-- word not match products and got no products -->
+  <div class="text-center py-5">
+    <h3 class="text-primary">No Products Found</h3>
+    <p class="text-muted">no products found for this search word or category.</p>
+  </div>
+  } } @else {
+  <!-- api problem -->
+  <div class="text-center py-5">
+    <h3 class="text-danger">something wrong</h3>
+    <p class="text-muted">api Interupt or poor network, refresh page.</p>
+    <a routerLink="/home" class="btn btn-outline-primary mt-3"> Back to Home </a>
+  </div>
+  }
+  <!-- pagination -->
+  <!-- pagination -->
+  <!-- pagination -->
+  <!-- pagination -->
+  @if(filteredData.length > pageSize){
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <button class="btn btn-outline-primary mx-2" (click)="prevPage()" [disabled]="page === 1">
+      <i class="bi bi-arrow-left"></i> Prev
+    </button>
+
+    <span class="mx-2">Page {{ page }} of {{ totalPages }}</span>
+
+    <button
+      class="btn btn-outline-primary mx-2"
+      (click)="nextPage()"
+      [disabled]="page === totalPages"
+    >
+      Next <i class="bi bi-arrow-right"></i>
+    </button>
+  </div>
+  } }
+  <!-- end pagination -->
+</div>

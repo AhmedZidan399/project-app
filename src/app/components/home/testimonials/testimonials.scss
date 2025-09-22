@@ -1,0 +1,38 @@
+/* 5. Testimonial
+/*----------------------------------------------*/
+.review-item blockquote {
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.rating svg.star {
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-color);
+}
+#testimonials .swiper-arrow svg {
+  width: 45px;
+  height: 45px;
+  fill: var(--light-gray-color);
+}
+.review-content .swiper-arrow {
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.review-content .swiper-arrow.swiper-arrow-next {
+  right: 0;
+}
+.review-content .quotation svg.quote {
+  color: var(--light-blue-color);
+}
+
+@media only screen and (max-width: 767px) {
+  #testimonials blockquote {
+    font-size: 2em;
+  }
+  .review-content .swiper-arrow {
+    bottom: -420px;
+  }
+}

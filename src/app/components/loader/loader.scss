@@ -1,0 +1,42 @@
+// loader
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 200px; /* space before products */
+}
+
+.loader span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fade 0.6s infinite;
+}
+
+.loader span:nth-child(1) {
+  background-color: #ff595e; /* red */
+  animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+  background-color: #8ac926; /* green */
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  background-color: #1982c4; /* blue */
+  animation-delay: 0.4s;
+}
+
+@keyframes fade {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}

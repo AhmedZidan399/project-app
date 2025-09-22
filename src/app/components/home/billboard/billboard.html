@@ -1,0 +1,21 @@
+<section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+  <div class="swiper main-swiper">
+    <div class="swiper-wrapper">
+      @for(swiper of swipers; track $index){
+      <div class="swiper-slide">
+        <app-swiper-slide></app-swiper-slide>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="swiper-icon swiper-arrow swiper-arrow-prev">
+    <svg class="chevron-left">
+      <use xlink:href="#chevron-left" />
+    </svg>
+  </div>
+  <div class="swiper-icon swiper-arrow swiper-arrow-next">
+    <svg class="chevron-right">
+      <use xlink:href="#chevron-right" />
+    </svg>
+  </div>
+</section>

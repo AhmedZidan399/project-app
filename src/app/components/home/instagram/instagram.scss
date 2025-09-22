@@ -1,0 +1,39 @@
+
+/* 7. Instagram
+/*----------------------------------------------*/
+#instagram figure.instagram-item {
+  width: 20%;
+}
+figure.instagram-item img.insta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.instagram-item .icon-overlay {
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 0.9s ease-out;
+}
+.instagram-item:hover .icon-overlay {
+  top: 0;
+  opacity: 1;
+}
+.instagram-item .icon-overlay svg.instagram {
+  height: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  #instagram figure.instagram-item {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  #instagram figure.instagram-item {
+    width: 100%;
+  }
+}

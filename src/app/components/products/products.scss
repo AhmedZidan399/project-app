@@ -1,0 +1,11 @@
+.card img {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+.product-content {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}

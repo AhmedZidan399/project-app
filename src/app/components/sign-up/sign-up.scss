@@ -1,0 +1,22 @@
+.modal-dialog {
+  width: 700px;
+}
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.btn-login {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #0062cc, #0096ff);
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 98, 204, 0.3);
+}

@@ -1,0 +1,13 @@
+/* 3. Icon Box - Company Services
+/*----------------------------------------------*/
+.icon-box .icon-box-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+  #company-services .icon-box {
+    flex-wrap: wrap;
+  }
+}
